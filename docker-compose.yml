@@ -1,0 +1,8 @@
+version: "1.0"
+
+services:
+  app:
+    build: .
+    container_name: "png2h"
+    ports: 
+      - 80:8080
