@@ -36,6 +36,7 @@ if uploaded_file is not None:
 
         # Nessa versão do streamlit só
         with open(exported_file_path, 'rb') as file:
+            # Tem que ser assim porque essa versão do Streamlit não tem o "download_button"
             st.write('<div style="text-align:center"><a href="data:file/h;base64,' + base64.b64encode(file.read()).decode() + '" download="converted_file.h"><button>Baixar arquivo convertido</button></a></div>', unsafe_allow_html=True)
 
     except Exception as e:  # Genérico
