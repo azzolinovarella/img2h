@@ -1,4 +1,3 @@
-from shutil import ExecError
 import streamlit as st
 import datetime as dt
 import gameduino.prep as gdprep
@@ -30,9 +29,9 @@ if uploaded_file is not None:
         (dpic, dchr, dpal) = gdprep.encode(Image.open(image_file_path))  # Aparentemente não dá para fechar
 
         with open(exported_file_path, "w") as hdr:
-            gdprep.dump(hdr, "titlescreen_pic", dpic)
-            gdprep.dump(hdr, "titlescreen_chr", dchr)
-            gdprep.dump(hdr, "titlescreen_pal", dpal)
+            gdprep.dump(hdr, "image_pic", dpic)
+            gdprep.dump(hdr, "image_chr", dchr)
+            gdprep.dump(hdr, "image_pal", dpal)
 
         # Nessa versão do streamlit só
         with open(exported_file_path, 'rb') as file:
