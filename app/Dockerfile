@@ -1,6 +1,6 @@
 FROM conda/miniconda3:latest
 
-ARG APP_ENV=png2h_app-env  
+ARG APP_ENV=app-env  
 
 # Pasta onde vai estar os arquivos 
 RUN mkdir /app
