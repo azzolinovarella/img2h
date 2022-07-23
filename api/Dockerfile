@@ -1,6 +1,6 @@
 FROM conda/miniconda3:latest
 
-ARG API_ENV=png2h_api-env
+ARG API_ENV=api-env
 
 # Pasta onde vai estar os arquivos 
 RUN mkdir /api
