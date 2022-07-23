@@ -1,5 +1,5 @@
-venv/
 ignore/
 .git/
 README.md
 docker-compose.yml
+*/**.pyc
