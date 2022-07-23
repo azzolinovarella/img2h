@@ -1,8 +1,25 @@
-version: "1.0"
+version: "2.0"
 
 services:
   app:
-    build: .
-    container_name: "png2h"
-    ports: 
-      - 443:$PORT
+    build:
+      dockerfile: ./app/Dockerfile
+      context: .
+    container_name: png2h-app
+    ports:
+      # - ${APP_PORT}:${PORT}  # Para rodar com heroku
+      - ${APP_PORT}:${APP_PORT}   # Para rodar local
+    depends_on:
+      - api
+    env_file:
+      - .env
+      
+  api:
+    build:
+      dockerfile: ./api/Dockerfile
+      context: .
+    container_name: png2h-api
+    # ports:
+    #   - ${API_PORT}:${API_PORT}  # Apenas se quiser deixar a api exposta;
+    env_file:
+      - .env
