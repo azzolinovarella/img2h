@@ -10,4 +10,4 @@ COPY ./app.py ./environment.yml ./
 RUN conda env create -f environment.yml --name app-env
 
 # Para rodar a aplicação
-ENTRYPOINT ["bash", "run.sh"]
+CMD ["bash", "run.sh"]

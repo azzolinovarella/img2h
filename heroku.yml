@@ -7,6 +7,6 @@ build:
     app: ./app/Dockerfile
     api: ./api/Dockerfile
 
-run:
-  app: conda activate app-env && streamlit run --browser.serverAddress app-env --browser.serverPort ${PORT} --server.port ${PORT} --theme.base dark app.py
-  api: conda activate api-env && python api.py
+# run:
+#   app: conda activate app-env && streamlit run --browser.serverAddress app-env --browser.serverPort ${PORT} --server.port ${PORT} --theme.base dark app.py
+#   api: conda activate api-env && python api.py

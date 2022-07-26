@@ -15,4 +15,4 @@ RUN conda env create -f environment.yml --name api-env
 RUN conda run -n api-env pip install git+https://github.com/azzolinovarella/gameduino.git#subdirectory=src
 
 # Para rodar a aplicação
-ENTRYPOINT ["bash", "run.sh"]
+CMD ["bash", "run.sh"]
