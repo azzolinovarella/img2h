@@ -8,7 +8,7 @@ WORKDIR /api
 ### sepa desnecessario o tmp...
 ADD ./tmp ./tmp
 ADD ./resources ./resources 
-COPY ./api.py ./environment.yml ./run.sh ./
+COPY ./api.py ./environment.yml ./
 
 # Gerando o env
 ## Necessário para o pillow!

@@ -6,7 +6,7 @@ ARG APP_ENV="app-env"
 RUN mkdir /app
 WORKDIR /app
 ADD ./assets ./assets
-COPY ./app.py ./environment.yml ./run.sh ./
+COPY ./app.py ./environment.yml ./
 
 # Gerando o env
 RUN conda env create -f environment.yml --name ${APP_ENV}
