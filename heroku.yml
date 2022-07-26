@@ -1,22 +1,8 @@
-version: "2.0"
+setup:
+  config:
+    env_file: ./env
 
-services:
-  app:
-    build:
-      dockerfile: ./app/Dockerfile
-      context: .
-    container_name: png2h-app
-    ports:
-      - ${APP_PORT}:${PORT}   # Para rodar com heroku
-    depends_on:
-      - api
-    env_file:
-      - .env
-      
-  api:
-    build:
-      dockerfile: ./api/Dockerfile
-      context: .
-    container_name: png2h-api
-    env_file:
-      - .env
+build:
+  docker:
+    app: ./app/Dockerfile
+    api: ./api/Dockerfile
