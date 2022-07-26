@@ -11,5 +11,7 @@ COPY ./app.py ./environment.yml ./run.sh ./
 # Gerando o env
 RUN conda env create -f environment.yml --name ${APP_ENV}
 
+RUN conda activate ${APP_ENV}
+
 # Para rodar a aplicação
 ENTRYPOINT ["bash", "run.sh"]
