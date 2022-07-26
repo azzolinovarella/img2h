@@ -7,7 +7,6 @@ services:
       context: .
     container_name: png2h-app
     ports:
-      # - ${APP_PORT}:${PORT}  # Para rodar com heroku
       - ${APP_PORT}:${APP_PORT}   # Para rodar local
     depends_on:
       - api
