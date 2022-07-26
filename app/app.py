@@ -87,7 +87,7 @@ def render_generate_sprite():
 def main():
     ## Fazer uma pág Index que sempre bate na API em / (para obter o log) 
     st.set_page_config(page_title="IMG2H", page_icon="./assets/favicon.png",
-                       menu_items={"Get Help": "https://github.com/azzolinovarella/img2h/blob/main/README.md",
+                       menu_items={"Get Help": "https://github.com/azzolinovarella/img2h/blob/heroku/README.md",
                                    "Report a bug": "https://github.com/azzolinovarella/img2h/issues",
                                    "About": "###### Desenvolvido por Felipe Azzolino Varella"})
 
