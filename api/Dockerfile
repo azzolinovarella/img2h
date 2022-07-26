@@ -1,5 +1,7 @@
 FROM conda/miniconda3:latest
 
+CMD [ "/bin/bash" ]
+
 # Pasta onde vai estar os arquivos 
 RUN mkdir /api
 WORKDIR /api
@@ -17,4 +19,4 @@ SHELL ["conda", "run", "-n", "api-env", "/bin/bash", "-c"]
 RUN pip install git+https://github.com/azzolinovarella/gameduino.git#subdirectory=src
 
 # Para rodar a aplicação
-ENTRYPOINT ["python", "api.py"]
+CMD ["python", "api.py"]

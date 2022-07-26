@@ -1,5 +1,7 @@
 FROM conda/miniconda3:latest
 
+CMD [ "/bin/bash" ]
+
 # Pasta onde vai estar os arquivos 
 RUN mkdir /app
 WORKDIR /app
@@ -12,4 +14,4 @@ RUN conda env create -f environment.yml --name app-env
 SHELL ["conda", "run", "-n", "app-env", "/bin/bash", "-c"]
 
 # Para rodar a aplicação
-ENTRYPOINT ["streamlit", "run", "--browser.serverAddress", "app-env", "--browser.serverPort", "${PORT}", "--server.port ${PORT}", "--theme.base", "dark app.py"]
+CMD ["streamlit", "run", "--browser.serverAddress", "app-env", "--browser.serverPort", "${PORT}", "--server.port ${PORT}", "--theme.base", "dark app.py"]
