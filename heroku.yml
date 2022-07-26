@@ -8,5 +8,5 @@ build:
     api: ./api/Dockerfile
 
 run:
-  app: bash run.sh
-  api: bash run.sh
+  app: bash app/run.sh
+  api: bash api/run.sh
