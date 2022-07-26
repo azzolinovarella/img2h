@@ -8,5 +8,5 @@ build:
     api: ./api/Dockerfile
 
 run:
-  app: bash app/run.sh
-  api: bash api/run.sh
+  app: streamlit run --browser.serverAddress app-env --browser.serverPort ${PORT} --server.port ${PORT} --theme.base dark app.py
+  api: python api.py
