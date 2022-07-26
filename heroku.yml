@@ -1,6 +1,6 @@
 setup:
   config:
-    env_file: ./env
+    env_file: ./.env
 
 build:
   docker:
