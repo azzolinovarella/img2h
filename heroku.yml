@@ -1,4 +1,4 @@
 build:
   docker:
-    web: ./app/Dockerfile
+    app: ./app/Dockerfile  # no heroku so se se chamar "web" funfa assim
     api: ./api/Dockerfile
