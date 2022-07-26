@@ -1,7 +1,3 @@
-setup:
-  config:
-    env_file: .env
-
 build:
   docker:
     app: ./app/Dockerfile
