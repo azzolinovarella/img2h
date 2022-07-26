@@ -6,9 +6,9 @@ ARG API_ENV=api-env
 RUN mkdir /api
 WORKDIR /api
 ### sepa desnecessario o tmp...
-ADD ./api/tmp ./tmp
-ADD ./api/resources ./resources 
-COPY ./api/api.py ./api/environment.yml ./api/run.sh ./
+ADD ./tmp ./tmp
+ADD ./resources ./resources 
+COPY ./api.py ./environment.yml ./run.sh ./
 
 # Gerando o env
 ## Necessário para o pillow!
