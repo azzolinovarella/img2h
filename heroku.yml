@@ -7,6 +7,6 @@ build:
     app: ./app/Dockerfile
     api: ./api/Dockerfile
 
-run:
-  app: streamlit run --browser.serverAddress app-env --browser.serverPort ${PORT} --server.port ${PORT} --theme.base dark app.py
-  api: python api.py
+# run:
+#   app: streamlit run --browser.serverAddress app-env --browser.serverPort ${PORT} --server.port ${PORT} --theme.base dark app.py
+#   api: python api.py
