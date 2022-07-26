@@ -1,8 +1,12 @@
 setup:
   config:
-    env_file: ./.env
+    env_file: .env
 
 build:
   docker:
     app: ./app/Dockerfile
     api: ./api/Dockerfile
+
+run:
+  app: bash run.sh
+  api: bash run.sh
