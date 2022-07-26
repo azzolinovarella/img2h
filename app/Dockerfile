@@ -12,7 +12,7 @@ COPY ./app.py ./environment.yml ./run.sh ./
 RUN conda env create -f environment.yml --name ${APP_ENV}
 
 # Starta o env por padrão
-SHELL ["conda", "run", "-n", ${APP_ENV}, "/bin/bash", "-c"]
+SHELL ["conda", "run", "-n", "app_env", "/bin/bash", "-c"]
 RUN conda activate ${APP_ENV}
 
 # Para rodar a aplicação
