@@ -91,8 +91,8 @@ def main():
                                    "Report a bug": "https://github.com/azzolinovarella/img2h/issues",
                                    "About": "###### Desenvolvido por Felipe Azzolino Varella"})
 
-    # st.write("# IMG2H")
-    st.image('./assets/logo.png', use_column_width=True)
+    st.write("# IMG2H")
+    # st.image('./assets/logo.png', use_column_width=True)
     opt = st.selectbox("Selecione o tipo de geração", options=['...', 'Background', 'Sprite'], index=0)
     
     if opt == '...':
