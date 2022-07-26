@@ -1,6 +1,6 @@
 FROM conda/miniconda3:latest
 
-CMD [ "/bin/bash" ]
+SHELL ["/bin/bash", "-c"]
 
 # Pasta onde vai estar os arquivos 
 RUN mkdir /api
@@ -15,9 +15,7 @@ COPY ./api.py ./environment.yml ./
 RUN apt update && apt install gcc libx11-dev git -y
 RUN conda env create -f environment.yml --name api-env
 ### Faz com que os comandos RUN executem com o env ativo por padrão
-SHELL ["conda", "run", "-n", "api-env", "/bin/bash", "-c"]
-RUN conda run -n ${API_ENV} pip install git+https://github.com/azzolinovarella/gameduino.git#subdirectory=src
+RUN conda run -n api-env pip install git+https://github.com/azzolinovarella/gameduino.git#subdirectory=src
 
 # Para rodar a aplicação
-ENTRYPOINT ["conda", "run", "-n", "api-env", "/bin/bash", "-c"]
-CMD ["python", "api.py"]
+CMD ["conda", "activate", "api-env", "&&", "python", "api.py"]
