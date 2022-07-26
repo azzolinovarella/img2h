@@ -17,7 +17,7 @@ RUN conda env create -f environment.yml --name ${API_ENV}
 RUN conda run -n ${API_ENV} pip install git+https://github.com/azzolinovarella/gameduino.git#subdirectory=src
 
 # Para ativar env por padrao
-SHELL ["conda", "run", "-n", "${API_ENV}", "/bin/bash", "-c"]
+SHELL ["conda", "run", "-n", ${API_ENV}, "/bin/bash", "-c"]
 RUN conda activate ${API_ENV}
 
 # Para rodar a aplicação
