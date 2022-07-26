@@ -1,6 +1,7 @@
 #!/bin/bash
 
-cp .env ./{api,app}/
+cp .env ./api/
+cp .env ./app/
 heroku git:remote -a img2h
 heroku stack:set container
 git add .
