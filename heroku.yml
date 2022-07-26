@@ -6,7 +6,3 @@ build:
   docker:
     app: ./app/Dockerfile
     api: ./api/Dockerfile
-
-run:
-  app: echo "Starting app..."
-  api: echo "Starting api..."
