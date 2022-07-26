@@ -3,7 +3,7 @@
 Aplicação web desenvolvida durante a matéria de Engenharia Unificada II (UFABC) para auxiliar na geração de gráficos para embarcados.
 
 Disponível em: 
-https://img2h.herokuapp.com/
+https://img2h.herokuapp.com/ 
 
 <!--
 ### TODO
